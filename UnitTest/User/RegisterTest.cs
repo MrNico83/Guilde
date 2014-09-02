@@ -1,6 +1,6 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Library.Poco.User.Register;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTest.User
 {
@@ -28,7 +28,7 @@ namespace UnitTest.User
       try
       {
         RegisterResponse response = this.WebService.Post<RegisterResponse>(request);
-        
+
         Assert.AreNotEqual(response.ApiKey, string.Empty);
         Assert.IsNotNull(response.User);
         Assert.IsTrue(response.User.UserFirstName == "Nicolas", "Bad firstname");
@@ -36,7 +36,7 @@ namespace UnitTest.User
         Assert.IsTrue(response.User.UserMail == "nlautridou@i-resa.com", "Bad email");
         Assert.IsTrue(response.User.UserLogin == "nicolas", "Bad login");
       }
-      catch(Exception e)
+      catch (Exception e)
       {
         Assert.Fail(e.Message);
       }

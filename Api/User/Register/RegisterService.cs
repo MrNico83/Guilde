@@ -1,7 +1,7 @@
-﻿using Library.Common;
+﻿using System.Linq;
+using Library.Common;
 using Library.Poco.User.Register;
 using ServiceStack;
-using System.Linq;
 using BLL = Library.BLL.CRUD;
 
 namespace Api.User.Register
