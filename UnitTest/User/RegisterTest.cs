@@ -25,8 +25,6 @@ namespace UnitTest.User
         Password = "kikoulol",
       };
 
-      var x = "toto";
-
       try
       {
         RegisterResponse response = this.WebService.Post<RegisterResponse>(request);
